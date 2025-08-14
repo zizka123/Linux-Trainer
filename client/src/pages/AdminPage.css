@@ -1,0 +1,278 @@
+.admin-page-wrapper {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.admin-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px 5%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.admin-header h1 {
+  color: white;
+  margin: 0;
+}
+
+.admin-content-wrapper {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 20px 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tab {
+  background: #ecf0f1;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #3498db;
+  color: white;
+}
+
+.admin-content {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.task-form-section, .task-list-section {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Выравнивание контента формы задач по левому краю */
+.task-form-section {
+  text-align: left;
+}
+
+/* Выравнивание списка групп и заголовка по левому краю */
+.task-list-section {
+  text-align: left;
+}
+
+.task-list-section h2 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.task-form-section .form-group select {
+  width: 100%;
+  text-align: left;
+  text-align-last: left; /* для корректного выравнивания выбранного значения в некоторых браузерах */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 100px;
+}
+
+.admin-task {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border-left: 4px solid #3498db;
+}
+
+.admin-task h3 {
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.group-count-badge {
+  margin-left: 8px;
+  background: #ecf0f1;
+  color: #2c3e50;
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.toggle-details-btn {
+  background: transparent;
+  color: #2c3e50;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.toggle-details-btn:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+.toggle-details-btn .chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.2s ease;
+}
+
+.toggle-details-btn.expanded .chevron {
+  transform: rotate(0deg);
+}
+
+.admin-task-details {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.admin-task-details p {
+  margin: 6px 0;
+}
+
+.admin-task-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.admin-task-item.editing {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52,152,219,0.15);
+}
+
+.admin-task-line {
+  margin-bottom: 6px;
+}
+
+.admin-task-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background: #f39c12;
+  color: white;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* Notification styles */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.notification.success {
+  background-color: #27ae60;
+}
+
+.notification.error {
+  background-color: #e74c3c;
+}
+
+.notification.warn {
+  background-color: #e67e22; /* оранжевый */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-content {
+    flex-direction: column;
+  }
+  
+  .admin-header {
+    padding: 10px 5%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .notification {
+    left: 10px;
+    right: 10px;
+    max-width: none;
+  }
+}

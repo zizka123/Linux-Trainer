@@ -1,0 +1,113 @@
+.home-page-wrapper {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.home-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px 5%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-header h1 {
+  color: white;
+  margin: 0;
+}
+
+.home-content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.group-block {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.group-header h3 {
+  margin: 0;
+}
+
+.group-count-badge {
+  margin-left: 8px;
+  background: #ecf0f1;
+  color: #2c3e50;
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.group-tasks {
+  padding: 0 16px 16px;
+}
+
+.toggle-details-btn {
+  background: transparent;
+  color: #2c3e50;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.toggle-details-btn:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+.toggle-details-btn .chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.2s ease;
+}
+
+.toggle-details-btn.expanded .chevron {
+  transform: rotate(0deg);
+}
+
+.admin-link {
+  background: #3498db;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-link:hover {
+  background: #2980b9;
+}
+
+.error-message {
+  color: #e74c3c;
+  background: #f8d7da;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
